@@ -15,25 +15,11 @@ export const Calendar = () => {
     setMaxFromDate(val);
   };
   return (
-    <div style={{ paddingTop: "50px" }}>
+    <div>
       <h2>Select date</h2>
-      <div
-        className=""
-        style={{
-          border: "1px solid #555",
-          borderRadius: "5px",
-          display: "inline-block",
-          textAlign: "start",
-          // padding: "15px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <div className="input-container input-date">
+      <div className="input-wrapper-container">
+        <div className="input-wrapper">
+          <div className="input-container">
             <input
               type="date"
               name=""
@@ -41,12 +27,11 @@ export const Calendar = () => {
               max={maxFromDate}
               onChange={maxDateHandler}
               id=""
-              style={{ border: "none", outline: "none" }}
             />
           </div>
           &nbsp;&nbsp; <i className="fa-solid fa-arrows-left-right"></i>
           &nbsp;&nbsp;
-          <div className="input-container input-date">
+          <div className="input-container">
             <input
               min={minToDate}
               // value={toDate}
@@ -54,7 +39,6 @@ export const Calendar = () => {
               type="date"
               name=""
               id=""
-              style={{ border: "none", outline: "none" }}
             />
           </div>
         </div>
